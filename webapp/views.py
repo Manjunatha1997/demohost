@@ -5,3 +5,9 @@ from django.shortcuts import render
 
 def index(request):
     return render(request,'index.html')
+
+def greetings(request):
+    if request.method == 'POST':
+        name=request.POST['name']
+
+    return render(request,'result.html',{'name':name})

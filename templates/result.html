@@ -10,17 +10,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <div class="container">
-     <form action="greetings" method="post">
-         {% csrf_token %}
-        <div class="form-group">
-            <input type="text" class="form-control" id="name" placeholder="Enter Your Name Here" name="name" required>
+    <div class="card">
+        <div class="card-header text-center text-success text-uppercase lead">
+            Dear <span class="text-white badge badge-primary">{{ name }}</span>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+        <div class="card-body lead text-info">
+          <marquee>  Wish you and your family a peaceful, memorable
+              Joyful, healthy and prosperous <span class="text-warning">Makar Sankranti! </span> </marquee>
+        </div>
+        <div class="card-footer text-center lead text-success">
+            Greetings from your's loving friend Manjunath
+        </div>
+    </div>
 </div>
-
-
 </body>
 </html>
